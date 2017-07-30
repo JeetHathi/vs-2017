@@ -4,7 +4,7 @@ import { StackNavigator } from 'react-navigation';
 
 export default class HomeScreen extends React.Component {
 	static navigationOptions = {
-		title: 'Home2'
+		title: 'Home'
 	};
 
 	constructor(props) {
@@ -70,7 +70,7 @@ export default class HomeScreen extends React.Component {
 							<Text>Gallery</Text>
 						</Image>
 					</TouchableHighlight>
-					<TouchableHighlight onPress={() => console.warn("WTF is going on")}>
+					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
