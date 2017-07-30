@@ -1,33 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, Dimensions, Image } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, Image, TouchableHighlight } from 'react-native';
 import { StackNavigator } from 'react-navigation';	
-
-/*
-class NavigationButton extends React.Component {
-	constructor(props) {
-		super(props);
-		this.text = this.props.text;
-		this.imgSrc = this.props.imgSrc;
-	}
-	render() {
-		console.log("Image: " + this.imgSrc);
-		let image = require(this.imgSrc);
-		return (
-			<View>
-				<Image
-					source={image}
-					style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
-					<Text>{this.text}</Text>
-				</Image>
-			</View>
-		);
-	}
-}
-*/
 
 export default class HomeScreen extends React.Component {
 	static navigationOptions = {
-		title: 'Home'
+		title: 'Home2'
 	};
 
 	constructor(props) {
@@ -37,72 +14,70 @@ export default class HomeScreen extends React.Component {
 	render() {
 		return (
 			<View style={styles.rootView}>
-				<Text>Started</Text>
 				<View style={styles.buttonContainer}>
-					<View>
+					<TouchableHighlight onPress={() => this.props.navigation.navigate('AboutUs')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
-							<Text>Button 1</Text>
+							<Text>About us</Text>
 						</Image>
-					</View>
-					<View>
+					</TouchableHighlight>
+					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
-							<Text>Button 2</Text>
+							<Text>Events</Text>
 						</Image>
-					</View>
+					</TouchableHighlight>
 				</View>
 				<View style={styles.buttonContainer}>
-					<View>
+					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
-							<Text>Button 3</Text>
+							<Text>Register</Text>
 						</Image>
-					</View>
-					<View>
+					</TouchableHighlight>
+					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
-							<Text>Button 4</Text>
+							<Text>Sponsors</Text>
 						</Image>
-					</View>
+					</TouchableHighlight>
 				</View>
 				<View style={styles.buttonContainer}>
-					<View>
+					<TouchableHighlight onPress={() => this.props.navigation.navigate('ContactUs')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
-							<Text>Button 5</Text>
+							<Text>Contact us</Text>
 						</Image>
-					</View>
-					<View>
+					</TouchableHighlight>
+					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
-							<Text>Button 6</Text>
+							<Text>Committee</Text>
 						</Image>
-					</View>
+					</TouchableHighlight>
 				</View>
 				<View style={styles.buttonContainer}>
-					<View>
+					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
-							<Text>Button 7</Text>
+							<Text>Gallery</Text>
 						</Image>
-					</View>
-					<View>
+					</TouchableHighlight>
+					<TouchableHighlight onPress={() => console.warn("WTF is going on")}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
-							<Text>Button 8</Text>
+							<Text>Developers</Text>
 						</Image>
-					</View>
+					</TouchableHighlight>
 				</View>
-				<Text>Ended</Text>
 			</View>
 		);
 	}
@@ -120,5 +95,11 @@ const styles = StyleSheet.create({
 		width: Dimensions.get('window').width,
 		alignItems: 'center',
 		justifyContent: 'space-around',
+	},
+	buttonImage: {
+		height: 100,
+		width: 100,
+		alignItems: 'center',
+		justifyContent: 'center'
 	}
 });
