@@ -1,6 +1,8 @@
 import { StackNavigator } from 'react-navigation';	
 import HomeScreen from './HomeScreen';
 import WIPScreen from './WIPScreen';
+import ContactUsScreen from './ContactUsScreen';
+import AboutUsScreen from './AboutUsScreen';
 
 const Routes = StackNavigator({
 	Home: {
@@ -8,6 +10,12 @@ const Routes = StackNavigator({
 	},
 	WIP: {
 		screen: WIPScreen
+	},
+	ContactUs: {
+		screen: ContactUsScreen
+	},
+	AboutUs: {
+		screen: AboutUsScreen
 	}
 });
 
