@@ -1,4 +1,6 @@
-import { StackNavigator } from 'react-navigation';	
+import { StackNavigator } from 'react-navigation';
+import React from 'react';
+import { View, StatusBar } from 'react-native';
 import HomeScreen from './HomeScreen';
 import WIPScreen from './WIPScreen';
 import ContactUsScreen from './ContactUsScreen';
@@ -19,4 +21,12 @@ const Routes = StackNavigator({
 	}
 });
 
-export default Routes;
+export default class App extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, marginTop: StatusBar.currentHeight }}>
+        <Routes />
+      </View>
+    );
+  }
+}
