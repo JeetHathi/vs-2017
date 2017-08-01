@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Dimensions, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, Image, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';	
 
 export default class HomeScreen extends React.Component {
@@ -15,68 +15,68 @@ export default class HomeScreen extends React.Component {
 		return (
 			<View style={styles.rootView}>
 				<View style={styles.buttonContainer}>
-					<TouchableHighlight onPress={() => this.props.navigation.navigate('AboutUs')}>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('AboutUs')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
 							<Text>About us</Text>
 						</Image>
-					</TouchableHighlight>
-					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
+					</TouchableOpacity>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('WIP')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
 							<Text>Events</Text>
 						</Image>
-					</TouchableHighlight>
+					</TouchableOpacity>
 				</View>
 				<View style={styles.buttonContainer}>
-					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('Register')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
 							<Text>Register</Text>
 						</Image>
-					</TouchableHighlight>
-					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
+					</TouchableOpacity>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('WIP')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
 							<Text>Sponsors</Text>
 						</Image>
-					</TouchableHighlight>
+					</TouchableOpacity>
 				</View>
 				<View style={styles.buttonContainer}>
-					<TouchableHighlight onPress={() => this.props.navigation.navigate('ContactUs')}>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('ContactUs')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
 							<Text>Contact us</Text>
 						</Image>
-					</TouchableHighlight>
-					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
+					</TouchableOpacity>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('WIP')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
 							<Text>Committee</Text>
 						</Image>
-					</TouchableHighlight>
+					</TouchableOpacity>
 				</View>
 				<View style={styles.buttonContainer}>
-					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('WIP')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
 							<Text>Gallery</Text>
 						</Image>
-					</TouchableHighlight>
-					<TouchableHighlight onPress={() => this.props.navigation.navigate('WIP')}>
+					</TouchableOpacity>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('WIP')}>
 						<Image
 							source={require('../img/circleplaceholder.png')}
 							style={{height: 100, width: 100, alignItems: 'center', justifyContent: 'center'}}>
 							<Text>Developers</Text>
 						</Image>
-					</TouchableHighlight>
+					</TouchableOpacity>
 				</View>
 			</View>
 		);
