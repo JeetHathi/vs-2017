@@ -5,6 +5,7 @@ import HomeScreen from './HomeScreen';
 import WIPScreen from './WIPScreen';
 import ContactUsScreen from './ContactUsScreen';
 import AboutUsScreen from './AboutUsScreen';
+import RegisterScreen from './RegisterScreen';
 
 const Routes = StackNavigator({
 	Home: {
@@ -18,6 +19,9 @@ const Routes = StackNavigator({
 	},
 	AboutUs: {
 		screen: AboutUsScreen
+	},
+	Register: {
+		screen: RegisterScreen
 	}
 });
 
